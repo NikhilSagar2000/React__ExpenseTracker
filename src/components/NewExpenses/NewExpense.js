@@ -11,8 +11,9 @@ const NewExpense = (props) => {
          ...newExpenseData,
          id: Math.ceil(Math.random() * 100000).toString()
       }
-      console.log(newExpenseDataWithID);
+      // console.log(newExpenseDataWithID);
       props.onAddNewExpense(newExpenseDataWithID);
+      setIsEditing(false);
    }
 
    const falsifyIsEditingState = () => {
