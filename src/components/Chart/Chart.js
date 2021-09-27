@@ -3,12 +3,12 @@ import './Chart.css';
 import ChartBar from './ChartBar';
 
 const Chart = props => {
-    const expensesAmount = props.dataPoints.map(cur => cur.value);
+    const expensesAmount = props.data.map(cur => cur.value);
 
     const maxValue = Math.max(...expensesAmount);
     return (
         <div className="chart">
-            {props.dataPoints.map(cur => 
+            {props.data.map(cur => 
                 <ChartBar 
                     key={cur.label }
                     value={ cur.value}
